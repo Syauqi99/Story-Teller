@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+
+html{
+    background-image: linear-gradient(90deg,#355c7d, #6c5b7b, #c06c84);
+    height: 100%;
+}
+
+
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 4vw;
+}
+
+header > p{
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+.main {
+    display: flex;
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 700px;
+    min-height: 400px;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+    background-image: linear-gradient(90deg, #FFEFBA,#FFFFFF);
+    box-shadow: 0px 11px 20px -8px rgba(0,0,0,0.52);
+}
+.right{
+    flex: 0 0 50%;
+    background-image: linear-gradient(-90deg, #FFEFBA,#FFFFFF);
+    box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.52);
+
+}
+
+.explanation-box{
+    position: relative;
+    background-image: linear-gradient(90deg,  #ffdf87,  #ffff66);
+    width:40%;
+    height: 8%;
+    border-radius: 25px;
+    box-shadow: 2px 2px 20px -3px rgba(0,0,0,0.48);
+    margin: 5% 5%;
+
+}
+
+
+.explanation-box > p{
+    font-family: 'Montserrat', cursive;
+    color: #414a4c;
+    position: absolute;
+    transform: translate(50%, -50%);
+    font-size: 1.5vw;
+}
+
+
+.explanation-par{
+    display: flex;
+    flex: 1;
+    height: 70%;
+    width: 90%;
+    border-radius: 25px;
+    margin: auto;
+    background-image: linear-gradient(90deg,  #ffdf87,  #ffff66); 
+    justify-content: space-around;
+}
+
+
+.explanation-par > .par{
+    font-family:  'Montserrat', cursive;
+    color:  #414a4c;
+}
+
+.par{
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    font-size: 1vw;
+    text-align: justify;
+}
+
+#Image-Selector{
+    flex: 0 0 40%;
+    overflow: hidden;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    align-content: center;
+    text-align: center;
+}
+
+
+#img1{
+    overflow: hidden;
+    flex: 1;
+}
+#img2{
+    overflow: hidden;
+    flex: 1;
+}
+#img3{
+    overflow: hidden;
+    flex: 1;
+}
+
+#img1 > img:hover{
+    animation: shake 2s;
+    animation-iteration-count: infinite;  
+}
+
+#img2 > img:hover{
+    animation: shake 2s;
+    animation-iteration-count: infinite;
+}
+
+#img3 > img:hover{
+    animation: shake 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+img{
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: 70%;
+}
+
+#Image-Highlight{
+    overflow: hidden;
+    flex: 0 0 60%;
+    align-items: center;
+    box-shadow: 0px 2px 16px -1px rgba(0,0,0,0.14);
+    display: flex;
+}
+
+#Image-Highlight > img{
+    width: 50%;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+}

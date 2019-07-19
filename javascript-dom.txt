@@ -1,0 +1,95 @@
+We can choose the element
+- ID: getElementByID
+- Class: getElementsByClassName not quite the same as accessing class 
+- tag: getElementsByTagName
+
+We can also access its child
+for example suppose an img has id image then
+to access its source
+getElementByID(image).src
+
+We can change the element as well
+for the inner text aka item inside the <> <>
+x = getElementByID(image)
+
+x.textContent = 'something'
+
+we can also change the html between <>
+
+x.innerHTML
+
+we can also change style
+
+x.style
+
+Class Name will return a list of containing its child 
+the method is the same 
+
+Tag name works like class name but it choose based on tag
+(h1, h2,p)
+
+QuerySelector is convinient wa of choosing any element without
+specifying it as class or id. However, it will only return single
+value and can't return list like ClassName or tag 
+
+to get list we can use QuerySelectorAll
+
+Parent Node is the one higher on the tree 
+sibling is the items that is equal on position and  parentnode
+
+child Node will choose all of the childs given the parent 
+Beware this also return any line break 
+This return HTML Collection 
+
+First child return any first element including line break 
+First Element child however giving the first non line break item 
+replace this with last will give the last element instead
+
+NextSibling will give the next child but also include any line break 
+use nextelementsbiling instead 
+
+Previous will give the previous sibiling
+
+
+//Create Element 
+
+var newDiv = document.createElement('div');
+
+new.className = 'hello' //add class 
+
+//add id
+newDiv.id = 'hello1' id 
+
+//add attr 
+newdic.setAttribute('title', 'Hello Div')
+
+//add element inside the div 
+
+var newDivText = document.createTextNode('Hello World')
+
+// add text to div 
+newDiv.appendChild(newDivText)
+
+var container = document.querySelector('header .container')
+var h1 = document.querySelector('header h1')
+
+newDiv.style.fonstSize ='30px'
+
+container.insertBefore(newdiv, h1)
+
+to make some function triggered when clicked
+var button = document.getElementByID('button').addEventListener('click', buttonclick)
+
+function buttonClick(e){
+    document.getElementByID('header-title').textContent = 'changed'
+}
+
+the function above is equivalent to 
+if clicked{
+    change header text to change 
+}
+
+we can also pass e onto the function 
+e.target will give the element that is clicked
+e.target.className will give the calss name as a string 
+e.target.classList will give the class as a list 
